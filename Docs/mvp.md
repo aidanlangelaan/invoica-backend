@@ -32,9 +32,8 @@
 - Phone
 - BillingAddressId (FK → Address)
 - VatNumber (optional)
-- PaymentTermDays (optional; overrides company default)
-- DayRate (optional; overrides company default)
-- KmRate (optional; overrides company default)
+- PaymentTermDays (optional; overrides default)
+- DayRate (optional; overrides default)
 
 ### Address
 - Id (PK)
@@ -91,9 +90,9 @@
 - VatCategoryCode (e.g., S, AA, Z, E, AE)
 - VatExemptionReasonCode (optional)
 - VatExemptionReason (optional) // human-readable reason if required
-- LineTotalExclVat
-- LineVatAmount
-- LineTotalInclVat
+- SubtotalExclVat
+- VatAmount
+- TotalInclVat
 
 ### Document (PDF of XML)
 - Id (PK)
@@ -101,8 +100,7 @@
 - FileName
 - ContentType // e.g., application/pdf, application/xml
 - StoragePathOrBlob
-- CreatedAt
-- 
+
 ### VatRate (catalog)
 - Id (PK)
 - CountryCode (ISO 3166-1 alpha-2, e.g., `NL`)
