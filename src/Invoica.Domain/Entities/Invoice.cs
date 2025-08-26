@@ -20,7 +20,7 @@ public class Invoice : AuditableEntity
 
     public required string Subject { get; set; }
 
-    // TODO: BillingAddressSnapshot
+    public InvoiceAddressSnapshot BillingAddress { get; set; } = null!;
 
     public required decimal SubtotalExclVat { get; set; }
 

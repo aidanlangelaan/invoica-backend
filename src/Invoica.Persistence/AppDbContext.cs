@@ -12,7 +12,26 @@ public class AppDbContext(
     : DbContext(options)
 {
     public virtual DbSet<Account> Accounts { get; set; }
+
+    public virtual DbSet<Address> Addresses { get; set; }
+
+    public virtual DbSet<Company> Companies { get; set; }
+
+    public virtual DbSet<Customer> Customers { get; set; }
+
+    public virtual DbSet<Document> Documents { get; set; }
+
+    public virtual DbSet<Invoice> Invoices { get; set; }
+
+    public virtual DbSet<InvoiceLine> InvoiceLines { get; set; }
+
+    public virtual DbSet<Order> Orders { get; set; }
+
+    public virtual DbSet<OrderLine> OrderLines { get; set; }
+
     public virtual DbSet<User> Users { get; set; }
+
+    public virtual DbSet<VatRate> VatRates { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

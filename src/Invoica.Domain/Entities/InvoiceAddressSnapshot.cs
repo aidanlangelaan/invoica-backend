@@ -1,6 +1,6 @@
 ﻿namespace Invoica.Domain.Entities;
 
-public class Address : AuditableEntity
+public sealed class InvoiceAddressSnapshot
 {
     public required string AddressLine1 { get; set; }
 

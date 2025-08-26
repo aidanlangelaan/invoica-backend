@@ -19,7 +19,7 @@ public class Customer : AuditableEntity
     public decimal? DayRate { get; set; }
 
     // Foreign keys
-    public Address Address { get; set; } = null!;
+    public Address BillingAddress { get; set; } = null!;
 
     // Relationships
     public ICollection<Order> Orders { get; set; } = new List<Order>();

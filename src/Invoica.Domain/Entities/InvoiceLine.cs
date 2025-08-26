@@ -18,9 +18,9 @@ public class InvoiceLine : AuditableEntity
 
     public required string VatCategoryCode { get; set; }
 
-    public required string VatExemptionReasonCode { get; set; }
+    public string? VatExemptionReasonCode { get; set; }
 
-    public required string VatExemptionReason { get; set; }
+    public string? VatExemptionReason { get; set; }
 
     public required decimal SubtotalExclVat { get; set; }
 
